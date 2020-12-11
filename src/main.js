@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import './plugins/element.js'
+import TreeTable from 'vue-table-with-tree-grid'
 
 //导入全局样式表
 
@@ -13,7 +14,7 @@ axios.interceptors.request.use(config=>{
   config.headers.Authorization = window.sessionStorage.getItem('token')
   return config
 })
-
+Vue.component('tree-table',TreeTable)
 // axios.default.baseURL ='http://timemeetyou.com:8889/api/private/v1/'
 Vue.prototype.$http = axios
 new Vue({

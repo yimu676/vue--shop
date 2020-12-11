@@ -60,5 +60,7 @@ _vue["default"].use(_elementUi.Select);
 
 _vue["default"].use(_elementUi.Option);
 
+_vue["default"].use(_elementUi.Cascader);
+
 _vue["default"].prototype.$message = _elementUi.Message;
 _vue["default"].prototype.$confirm = _elementUi.MessageBox.confirm;

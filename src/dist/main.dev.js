@@ -8,6 +8,8 @@ var _router = _interopRequireDefault(require("./router"));
 
 require("./plugins/element.js");
 
+var _vueTableWithTreeGrid = _interopRequireDefault(require("vue-table-with-tree-grid"));
+
 require("./assets/css/global.css");
 
 var _axios = _interopRequireDefault(require("axios"));
@@ -20,7 +22,9 @@ _axios["default"].defaults.baseURL = 'https://www.liulongbin.top:8888/api/privat
 _axios["default"].interceptors.request.use(function (config) {
   config.headers.Authorization = window.sessionStorage.getItem('token');
   return config;
-}); // axios.default.baseURL ='http://timemeetyou.com:8889/api/private/v1/'
+});
+
+_vue["default"].component('tree-table', _vueTableWithTreeGrid["default"]); // axios.default.baseURL ='http://timemeetyou.com:8889/api/private/v1/'
 
 
 _vue["default"].prototype.$http = _axios["default"];
